@@ -1,0 +1,17 @@
+{
+  "name": "sever-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch /src/sever.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3"
+  }
+}

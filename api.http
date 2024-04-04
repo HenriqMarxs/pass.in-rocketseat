@@ -1,8 +1,24 @@
 POST http://localhost:3333/events
 Content-Type: application/json
 
+
 {
-    "title": "NLW Unite Summit",
+    "title": "NLW water",
     "details": "Um evento para apaxonados por programação",
-    "maximumAttendees": 100
+    "maximumAttendees": 1
+    
 }
+###
+
+POST http://localhost:3333/events/076d521c-53e1-4f13-99cb-f129e8dfaf09/attendees
+Content-Type: application/json
+
+
+{
+    "name": "Henrique Marques",
+    "email": "henrichat0@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/076d521c-53e1-4f13-99cb-f129e8dfaf09

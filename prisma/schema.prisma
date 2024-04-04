@@ -1,5 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 
 generator client {
   provider = "prisma-client-js"
@@ -16,5 +15,24 @@ model Events{
   details String?
   slug String @unique
   maximumAttendees Int? @map("maximum_attendees")
+  attendees   Attendee[]
   @@map("events")
+}
+
+
+
+
+
+model Attendee {
+  id Int @id @default(autoincrement())
+  name String
+  email String
+  createdAt DateTime @default(now()) @map("created_at")
+  eventId String @map("event_id")
+
+  event Events  @relation(fields: [eventId], references : [id])
+
+
+  @@unique([eventId, email])
+  @@map("attendees")
 }

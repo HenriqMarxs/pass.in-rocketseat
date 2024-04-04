@@ -12,5 +12,5 @@
     "skipLibCheck": true,
     "moduleResolution": "node16"
   },
-  "include": ["src", "tsconfig.json"]
+  "include": ["src"]
 }

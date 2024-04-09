@@ -8,7 +8,6 @@ import { generateSlug } from "../utils/generate-slug";
 export async function createEvent(app: FastifyInstance){
     app.withTypeProvider<ZodTypeProvider>().post('/events', {
     schema:{
-
             body:
                 z.object({
                 title : z.string().min(4),

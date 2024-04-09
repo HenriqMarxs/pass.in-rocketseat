@@ -17,8 +17,8 @@ export async function getEvent(app: FastifyInstance){
                 eventId: z.string().uuid(),
             }),
             response: {
-                200:{
-                    event: z.object({
+                200:z.object({ 
+                        event: z.object({
                         id: z.string().uuid(), 
                         title: z.string(), 
                         details:  z.string().nullable(),
@@ -27,7 +27,8 @@ export async function getEvent(app: FastifyInstance){
                         attendesAmount: z.number().int(), 
 
                     })
-                }
+                }),       
+                
             },
         }
     }, async (request, replay)=> {

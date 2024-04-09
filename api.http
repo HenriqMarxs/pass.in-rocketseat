@@ -22,3 +22,20 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3333/events/076d521c-53e1-4f13-99cb-f129e8dfaf09
+
+
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+Content-Type: application/json
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+Content-Type: application/json
+
+
+###
+GET http://localhost:3333/events/b4db6cc1-dfe1-401c-84fc-6742b385fcb0/attendees?query=henrique
+
